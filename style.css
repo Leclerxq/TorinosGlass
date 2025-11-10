@@ -1,0 +1,88 @@
+/* PALETA
+Dorado: #FABA4C
+Verde Profundo: #1A5427
+Negro Vidrio: #000001
+*/
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER TRANSPARENTE */
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
+    background: rgba(26, 84, 39, 0.55);
+}
+
+/* NAV SEPARACIÓN REAL */
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* ← separa logo y links opuestos */
+    align-items: center;
+    padding: 10px 40px; /* ← puedes ajustar este margen */
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+    margin-right: -200px; /* ← mueve los botones más a la derecha */
+}
+
+.navbar-brand {
+    margin-left: -250px; /* ← mueve el logo más a la izquierda */
+}
+
+/* LINKS */
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: .3s;
+    font-size: 17px;
+}
+
+.nav-links a:hover {
+    color: #FABA4C; /* ← Vuelve el hover dorado */
+}
+
+/* CARRUSEL */
+.carousel-item img {
+    height: 65vh;
+    object-fit: cover;
+}
+
+/* FLECHAS */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(90%) brightness(90%);
+    opacity: 0.7;
+    transition: .3s;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    opacity: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 10px 20px;
+    }
+
+    .nav-links {
+        gap: 18px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
