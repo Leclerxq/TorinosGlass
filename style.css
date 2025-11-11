@@ -19,15 +19,52 @@ header {
 }
 
 /* NAVBAR */
-.navbar .nav-link {
-    color: white;
-    font-weight: 500;
-    margin-left: 20px;
-    transition: .3s;
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
 }
 
-.navbar .nav-link:hover {
-    color: #FABA4C;
+/* AJUSTE DEL LOGO MÁS A LA IZQUIERDA */
+.navbar-brand {
+    margin-left: -200px; /* Ajusta el valor a tu gusto */
+}
+
+/* AJUSTE DE SEPARACIÓN DE LOS LINKS HACIA LA DERECHA */
+.nav-links {
+    display: flex;
+    gap: 45px;
+    margin-right: -200px; /* Ajusta aquí también */
+}
+
+/* Opcional: mayor separación entre los textos */
+.nav-links a {
+    padding: 0 -200px;
+}
+/* Restaurar color del texto en el menú */
+.nav-links a {
+    color: white !important;   /* Color normal del texto */
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Efecto hover amarillo */
+.nav-links a:hover {
+    color: #ffdd00 !important; /* Cambia este amarillo si deseas otro tono */
+}
+
+/* Fuerza color blanco para los enlaces del menú */
+header .nav-links a,
+header .navbar-nav .nav-link {
+    color: white !important;
+}
+
+/* Fuerza hover dorado */
+header .nav-links a:hover,
+header .navbar-nav .nav-link:hover {
+    color: #FABA4C !important;
 }
 
 /* Ícono hamburguesa visible */
@@ -75,3 +112,127 @@ header {
 .whatsapp:hover img {
     transform: scale(1.1);
 }
+
+.productos {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.productos h2 {
+    color: #1A5427;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.productos-grid {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.producto-card {
+    background: rgba(255,255,255,0.85);
+    border-radius: 14px;
+    padding: 25px;
+    backdrop-filter: blur(8px);
+    border: 1px solid #FABA4C40;
+    transition: .3s;
+}
+
+.producto-card:hover {
+    transform: translateY(-4px);
+    border-color: #FABA4C;
+}
+
+.producto-card h3 {
+    color: #1A5427;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.producto-card p {
+    font-size: 14px;
+    color: #333;
+}
+
+.producto-card button {
+    margin-top: 10px;
+    background: #FABA4C;
+    border: none;
+    padding: 7px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #000;
+    font-weight: 600;
+}
+
+.oculto {
+    display: none;
+    margin-top: 12px;
+    text-align: left;
+}
+
+/* FOOTER */
+.footer {
+    background: #000;
+    color: white;
+    padding: 60px 8%;
+    margin-top: 70px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.footer-info h3 {
+    font-size: 26px;
+    color: #FABA4C;
+    margin-bottom: 14px;
+}
+
+.footer-info p {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.footer-info strong {
+    color: #FABA4C;
+}
+
+.footer-info a {
+    color: #FABA4C;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.footer-info a:hover {
+    color: #ffffff;
+}
+
+/* MAPA más elegante y más pequeño */
+.footer-mapa {
+    width: 380px;
+    height: 230px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .footer-mapa {
+        width: 100%;
+        max-width: 400px;
+        height: 240px;
+    }
+}
+
