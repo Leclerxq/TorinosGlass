@@ -256,3 +256,46 @@ nav .container {
         height: 38vh;
     }
 }
+
+/* Ajustes finos para header en móvil */
+@media (max-width: 768px) {
+
+    header {
+        padding: 4px 0 !important;
+        height: 60px; /* reduce altura */
+    }
+
+    .navbar-brand img {
+        max-height: 42px !important; /* tamaño del logo */
+        width: auto;
+    }
+
+    /* Botón hamburguesa más pequeño */
+    .menu-toggle {
+        transform: scale(0.8);
+        margin-right: 6px;
+    }
+
+    /* Carrusel menos alto */
+    .carousel-item img {
+        height: 35vh !important;
+        object-fit: cover;
+    }
+
+    /* Sección de título más cercana */
+    .section-title, h2 {
+        margin-top: 18px !important;
+    }
+}
+
+/* Extra small */
+@media (max-width: 480px) {
+
+    .navbar-brand img {
+        max-height: 38px !important;
+    }
+
+    .carousel-item img {
+        height: 32vh !important;
+    }
+}
