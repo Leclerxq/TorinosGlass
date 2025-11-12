@@ -299,3 +299,73 @@ nav .container {
         height: 32vh !important;
     }
 }
+/* NAVBAR GENERAL */
+.navbar {
+  background: rgba(26, 84, 39, 0.65);
+  backdrop-filter: blur(8px);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* LOGO */
+.navbar-brand img {
+  height: 48px;
+  width: auto;
+}
+
+/* LINKS */
+.nav-link {
+  color: white !important;
+  font-weight: 500;
+  font-size: 17px;
+  margin: 0 8px;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #FABA4C !important;
+}
+
+/* HAMBURGUESA */
+.navbar-toggler {
+  border: none;
+  filter: invert(100%);
+}
+
+/* Fondo del menú desplegado */
+.navbar-collapse {
+  background: rgba(26, 84, 39, 0.95);
+  padding: 10px;
+  border-radius: 0 0 12px 12px;
+}
+
+/* Centrado y margen */
+.navbar-nav {
+  text-align: center;
+}
+
+/* RESPONSIVE AJUSTES */
+@media (max-width: 768px) {
+  .navbar-brand img {
+    height: 42px;
+  }
+
+  .navbar-collapse {
+    margin-top: 6px;
+  }
+
+  .carousel-item img {
+    height: 35vh !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-brand img {
+    height: 38px;
+  }
+
+  .carousel-item img {
+    height: 32vh !important;
+  }
+}
